@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شين | عيادة تجميل الأسنان - ابتسامة تناسب جمالك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+    --primary-color: #2a5bd7;
+    --secondary-color: #ffcc00;
+    --dark-color: #1a1a2e;
+    --light-color: #f8f9fa;
+    --accent-color: #e94560;
+    --text-color: #333;
+    --text-light: #777;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* باقي الـ CSS كما هو */
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1e4bbd;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(42, 91, 215, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e6b800;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 204, 0, 0.2);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+            padding: 20px 0;
+        }
+
+        .header.scrolled {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .header.scrolled .logo {
+            color: var(--dark-color);
+        }
+
+        .nav-menu {
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+            position: relative;
+        }
+
+        .nav-menu a {
+            color: white;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 1.05rem;
+        }
+
+        .header.scrolled .nav-menu a {
+            color: var(--dark-color);
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--secondary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .header.scrolled .mobile-menu-btn {
+            color: var(--dark-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)), 
+                        url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        /* Features */
+        .features {
+            background-color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+            border-bottom: 4px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+        }
+
+        /* About */
+        .about {
+            background-color: #f5f7fa;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(42, 91, 215, 0.2);
+            z-index: 1;
+        }
+
+        .about-content h2 {
+            font-size: 2.3rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .about-list {
+            margin: 30px 0;
+        }
+
+        .about-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-list i {
+            color: var(--secondary-color);
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Services */
+        .services {
+            background-color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .service-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .service-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .service-price {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Doctors */
+        .doctors {
+            background-color: #f5f7fa;
+        }
+
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .doctor-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .doctor-img {
+            height: 320px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .doctor-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .doctor-social {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .doctor-card:hover .doctor-social {
+            opacity: 1;
+        }
+
+        .doctor-social a {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .doctor-social a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .doctor-info {
+            padding: 25px 20px;
+        }
+
+        .doctor-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .doctor-info p {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Appointment */
+        .appointment {
+            background: linear-gradient(135deg, var(--primary-color), #1a3a8f);
+            color: white;
+        }
+
+        .appointment .section-title h2,
+        .appointment .section-title p {
+            color: white;
+        }
+
+        .appointment-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .appointment-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .appointment-info ul {
+            margin: 30px 0;
+        }
+
+        .appointment-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .appointment-info i {
+            margin-left: 10px;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        .appointment-form {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(42, 91, 215, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #1e4bbd;
+            transform: translateY(-3px);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: white;
+        }
+
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            margin: 20px;
+        }
+
+        .client-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 3px solid var(--secondary-color);
+        }
+
+        .client-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .client-rating {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .client-info h4 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .client-info p {
+            color: var(--text-light);
+        }
+
+        /* Gallery */
+        .gallery {
+            background-color: #f5f7fa;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(42, 91, 215, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-icon {
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* FAQ */
+        .faq {
+            background-color: white;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .faq-question {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+
+        .footer-links i {
+            margin-left: 8px;
+            font-size: 0.9rem;
+        }
+
+        .footer-contact li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-contact i {
+            margin-left: 10px;
+            color: var(--secondary-color);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .section {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about-container,
+            .appointment-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                order: -1;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 0;
+                transition: var(--transition);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 15px 0;
+            }
+
+            .nav-menu a {
+                color: var(--dark-color);
+                font-size: 1.2rem;
+            }
+
+            .header.scrolled .nav-menu {
+                top: 70px;
+                height: calc(100vh - 70px);
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-card,
+            .doctor-card {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="https://via.placeholder.com/40x40" alt="شين لوجو">
+                أسنان <span>شين</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">الرئيسية</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#about">عن العيادة</a></li>
+                    <li><a href="#doctors">أطباؤنا</a></li>
+                    <li><a href="#gallery">معرض الأعمال</a></li>
+                    <li><a href="#appointment">احجز موعد</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>ابتسامة تناسب جمالك</h1>
+                <p>في عيادة أسنان شين، نقدم لك أحدث تقنيات طب الأسنان التجميلي والعلاجي لتحصل على الابتسامة التي تحلم بها.</p>
+                <div class="hero-btns">
+                    <a href="#appointment" class="btn btn-primary">احجز موعد الآن</a>
+                    <a href="#services" class="btn btn-secondary">استكشف خدماتنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features">
+        <div class="container">
+            <div class="section-title">
+                <h2>لماذا تختار عيادة شين؟</h2>
+                <p>نحن نقدم تجربة فريدة ورعاية شاملة لصحة أسنانك وجمال ابتسامتك</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>خبرة واسعة</h3>
+                    <p>فريق من الأطباء المتخصصين ذوي الخبرة الطويلة في مختلف مجالات طب الأسنان</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-teeth-open"></i>
+                    </div>
+                    <h3>أحدث التقنيات</h3>
+                    <p>نستخدم أحدث الأجهزة والتقنيات العالمية في تشخيص وعلاج الأسنان</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>معايير السلامة</h3>
+                    <p>نلتزم بأعلى معايير التعقيم والسلامة لحماية صحتك وصحة فريقنا</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2>عيادة أسنان شين</h2>
+                    <p>تأسست عيادة أسنان شين عام 2010 بهدف تقديم خدمات طب الأسنان التجميلي والعلاجي بأعلى معايير الجودة والاحترافية.</p>
+                    <p>نسعى دائمًا لتحقيق رضا المرضى من خلال تقديم حلول مبتكرة وفعالة لمشاكل الأسنان مع الحفاظ على الجمال الطبيعي للابتسامة.</p>
+                    
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i> فريق طبي مؤهل وذو خبرة عالية</li>
+                        <li><i class="fas fa-check-circle"></i> أحدث الأجهزة والتقنيات العالمية</li>
+                        <li><i class="fas fa-check-circle"></i> بيئة علاجية مريحة وآمنة</li>
+                        <li><i class="fas fa-check-circle"></i> خطط علاجية مخصصة لكل حالة</li>
+                    </ul>
+                    
+                    <a href="#" class="btn btn-primary">المزيد عنا</a>
+                </div>
+                
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="عن العيادة">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدماتنا المتكاملة</h2>
+                <p>نقدم مجموعة واسعة من خدمات طب الأسنان التجميلي والعلاجي</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="تبييض الأسنان">
+                    </div>
+                    <div class="service-content">
+                        <h3>تبييض الأسنان</h3>
+                        <p>حصولك على ابتسامة ناصعة البياض أصبح أسهل مع أحدث تقنيات التبييض الآمن والفعال باستخدام أفضل الأنظمة العالمية.</p>
+                        <div class="service-meta">
+                            <span class="service-price">د.ع 200,000</span>
+                            <a href="#appointment" class="btn btn-secondary">احجز الآن</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="تقويم الأسنان">
+                    </div>
+                    <div class="service-content">
+                        <h3>تقويم الأسنان</h3>
+                        <p>حلول متكاملة لتقويم الأسنان بكل أنواعه (تقويم شفاف، تقويم داخلي، تقويم معدني) لتحقيق المحاذاة المثالية لأسنانك.</p>
+                        <div class="service-meta">
+                            <span class="service-price">د.ع 300,000 </span>
+                            <a href="#appointment" class="btn btn-secondary">احجز الآن</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="زراعة الأسنان">
+                    </div>
+                    <div class="service-content">
+                        <h3>زراعة الأسنان</h3>
+                        <p>حلول دائمة ومتطورة لاستبدال الأسنان المفقودة بأسنان صناعية ثابتة وطبيعية المظهر باستخدام أفضل الأنظمة العالمية.</p>
+                        <div class="service-meta">
+                            <span class="service-price">د.ع 350,000</span>
+                            <a href="#appointment" class="btn btn-secondary">احجز الآن</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1588778228440-8d86b08a3548?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="الفينير">
+                    </div>
+                    <div class="service-content">
+                        <h3>قشور الفينير</h3>
+                        <p>حل مثالي لتحسين شكل ولون الأسنان الأمامية باستخدام قشور خزفية رقيقة تعطي مظهرًا طبيعيًا ومثاليًا.</p>
+                        <div class="service-meta">
+                            <span class="service-price">د.ع 250,000</span>
+                            <a href="#appointment" class="btn btn-secondary">احجز الآن</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1588778228440-8d86b08a3548?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="علاج اللثة">
+                    </div>
+                    <div class="service-content">
+                        <h3>علاج اللثة</h3>
+                        <p>تشخيص وعلاج أمراض اللثة المختلفة باستخدام أحدث التقنيات للحفاظ على صحة الفم والأسنان.</p>
+                        <div class="service-meta">
+                            <span class="service-price">د.ع 500,000</span>
+                            <a href="#appointment" class="btn btn-secondary">احجز الآن</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1588778224261-1a0d0a5e053e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="علاج عصب الأسنان">
+                    </div>
+                    <div class="service-content">
+                        <h3>علاج عصب الأسنان</h3>
+                        <p>علاج جذور الأسنان المصابة باستخدام تقنيات حديثة للحفاظ على الأسنان الطبيعية وتجنب الخلع.</p>
+                        <div class="service-meta">
+                            <span class="service-price">د.ع 400,000</span>
+                            <a href="#appointment" class="btn btn-secondary">احجز الآن</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="section doctors">
+        <div class="container">
+            <div class="section-title">
+                <h2>فريق أطباؤنا</h2>
+                <p>تعرف على فريقنا من الأطباء المتخصصين في مختلف مجالات طب الأسنان</p>
+            </div>
+            
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="الدكتورة سارة أحمد">
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>الدكتورة سارة أحمد</h3>
+                        <p>أخصائية تجميل الأسنان</p>
+                        <p>خريجة جامعة الملك سعود، متخصصة في تجميل الأسنان وعلاج اللثة</p>
+                    </div>
+                </div>
+                
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="الدكتور محمد خالد">
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>الدكتور محمد خالد</h3>
+                        <p>أخصائي زراعة الأسنان</p>
+                        <p>خريج جامعة هارفارد، متخصص في زراعة الأسنان وجراحة الفم</p>
+                    </div>
+                </div>
+                
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="الدكتورة نورا عبدالله">
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>الدكتورة نورا عبدالله</h3>
+                        <p>أخصائية تقويم الأسنان</p>
+                        <p>خريجة جامعة لندن، متخصصة في تقويم الأسنان للكبار والأطفال</p>
+                    </div>
+                </div>
+                
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="الدكتور علي حسين">
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>الدكتور علي حسين</h3>
+                        <p>أخصائي علاج عصب الأسنان</p>
+                        <p>خريج جامعة طوكيو، متخصص في علاج جذور الأسنان وحالات الألم المعقدة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="section appointment">
+        <div class="container">
+            <div class="section-title">
+                <h2>احجز موعدك الآن</h2>
+                <p>املأ النموذج وسنتصل بك لتأكيد الموعد خلال 24 ساعة</p>
+            </div>
+            
+            <div class="appointment-container">
+                <div class="appointment-info">
+                    <h3>ساعات العمل</h3>
+                    <p>نحن متاحون لخدمتك خلال الأوقات التالية:</p>
+                    
+                    <ul>
+                        <li><i class="far fa-clock"></i> السبت - الخميس: 9 صباحًا - 9 مساءً</li>
+                        <li><i class="far fa-clock"></i> الجمعة: مغلق</li>
+                        <li><i class="fas fa-phone"></i> للطوارئ: 07718721380 </li>
+                        <li><i class="fas fa-map-marker-alt"></i> العنوان: بغداد العامرية شارع عمل الشعبي</li>
+                    </ul>
+                    
+                    <div class="working-hours-img">
+                        <img src="https://via.placeholder.com/400x300" alt="ساعات العمل">
+                    </div>
+                </div>
+                
+                <div class="appointment-form">
+                    <form id="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">الاسم الكامل</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف</label>
+                                <input type="tel" id="phone" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" id="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="date">تاريخ الموعد</label>
+                                <input type="date" id="date" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">الخدمة المطلوبة</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">اختر الخدمة</option>
+                                <option value="استشارة أولية">استشارة أولية</option>
+                                <option value="فحص وتنظيف">فحص وتنظيف</option>
+                                <option value="تبييض الأسنان">تبييض الأسنان</option>
+                                <option value="تقويم الأسنان">تقويم الأسنان</option>
+                                <option value="زراعة الأسنان">زراعة الأسنان</option>
+                                <option value="قشور الفينير">قشور الفينير</option>
+                                <option value="علاج اللثة">علاج اللثة</option>
+                                <option value="علاج عصب">علاج عصب</option>
+                                <option value="خدمات أخرى">خدمات أخرى</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">ملاحظات إضافية</label>
+                            <textarea id="message" class="form-control" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">تأكيد الحجز</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>آراء عملائنا</h2>
+                <p>ما يقوله مرضانا عن تجربتهم مع عيادة أسنان شين</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="client-img">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="آمنة عبدالله">
+                    </div>
+                    <div class="client-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "تجربة رائعة مع عيادة شين، فريق محترف واهتمام بالتفاصيل. بعد تركيب الفينير أصبحت ابتسامتي أجمل بكثير. شكرًا للدكتورة سارة على الاحترافية العالية."
+                    </p>
+                    <div class="client-info">
+                        <h4>آمنة عبدالله</h4>
+                        <p>مريضة فينير الأسنان</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>معرض أعمالنا</h2>
+                <p>بعض النماذج من أعمالنا في تجميل وعلاج الأسنان</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="عملية تبييض">
+                    <div class="gallery-overlay">
+                        <a href="#" class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="تقويم أسنان">
+                    <div class="gallery-overlay">
+                        <a href="#" class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="زراعة أسنان">
+                    <div class="gallery-overlay">
+                        <a href="#" class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1588778228440-8d86b08a3548?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="فينير الأسنان">
+                    <div class="gallery-overlay">
+                        <a href="#" class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1588778228440-8d86b08a3548?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="علاج اللثة">
+                    <div class="gallery-overlay">
+                        <a href="#" class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1588778228440-8d86b08a3548?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="ابتسامة هوليوود">
+                    <div class="gallery-overlay">
+                        <a href="#" class="gallery-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>أسئلة شائعة</h2>
+                <p>إجابات على بعض الأسئلة التي تهم مرضانا</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما هي مدة علاج تقويم الأسنان؟</span
+                                                <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>مدة علاج تقويم الأسنان تختلف حسب حالة كل مريض وعمره ونوع التقويم المستخدم. بشكل عام:</p>
+                            <ul>
+                                <li>التقويم المعدني التقليدي: من 12 إلى 24 شهرًا</li>
+                                <li>التقويم الشفاف (إنفزلاين): من 6 إلى 18 شهرًا</li>
+                                <li>التقويم الداخلي (اللساني): من 18 إلى 36 شهرًا</li>
+                            </ul>
+                            <p>يحدد الطبيب المدة الدقيقة بعد الفحص الشامل ودراسة الحالة. كما أن المتابعة الدورية والالتزام بتعليمات الطبيب تساعد في تحقيق النتائج في الوقت المتوقع.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل تبييض الأسنان آمن؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>نعم، تبييض الأسنان إجراء آتمام عند إجرائه تحت إشراف طبيب أسنان متخصص. نستخدم في عيادتنا مواد تبييض معتمدة وذات تركيز آمن:</p>
+                            <ul>
+                                <li>لا يسبب تلفًا لمينا الأسنان عند الاستخدام الصحيح</li>
+                                <li>يمكن أن يسبب حساسية مؤقتة تزول خلال 24-48 ساعة</li>
+                                <li>نتائج التبييض تدوم من 6 أشهر إلى سنتين حسب العناية بالأسنان</li>
+                            </ul>
+                            <p>ننصح بتجنب تبييض الأسنان المنزلي غير الخاضع للإشراف الطبي لما قد يسببه من أضرار.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما الفرق بين الفينير واللومينير؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>الفرق الرئيسي بين الفينير واللومينير يكمن في السمك وطريقة التحضير:</p>
+                            <table>
+                                <tr>
+                                    <th>المقارنة</th>
+                                    <th>الفينير</th>
+                                    <th>اللومينير</th>
+                                </tr>
+                                <tr>
+                                    <td>السمك</td>
+                                    <td>0.5 مم</td>
+                                    <td>0.2 مم</td>
+                                </tr>
+                                <tr>
+                                    <td>تحضير الأسنان</td>
+                                    <td>يتطلب نحت جزء من السن</td>
+                                    <td>لا يحتاج نحت الأسنان في معظم الحالات</td>
+                                </tr>
+                                <tr>
+                                    <td>المدة</td>
+                                    <td>جلستين أو أكثر</td>
+                                    <td>يمكن إتمامه في جلسة واحدة</td>
+                                </tr>
+                                <tr>
+                                    <td>السعر</td>
+                                    <td>أعلى سعرًا</td>
+                                    <td>أقل سعرًا</td>
+                                </tr>
+                            </table>
+                            <p>يحدد الطبيب الأنسب لكل حالة حسب وضع الأسنان والنتيجة المرجوة.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل زراعة الأسنان مؤلمة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>زراعة الأسنان تتم تحت التخدير الموضعي، لذلك لا تشعر بأي ألم خلال العملية. بعد العملية:</p>
+                            <ul>
+                                <li>قد تشعر ببعض الانزعاج أو التورم لمدة 2-3 أيام</li>
+                                <li>يمكن السيطرة على أي ألم بمسكنات عادية</li>
+                                <li>نقدم لمرضانا خطة رعاية ما بعد الزراعة لتخفيف أي انزعاج</li>
+                            </ul>
+                            <p>مع التطورات الحديثة في تقنيات الزراعة، أصبحت العملية أكثر راحة وسهولة مما كانت عليه في الماضي.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>عن العيادة</h3>
+                    <p>عيادة أسنان شين توفر أحدث خدمات طب الأسنان التجميلي والعلاجي بمعايير عالمية وبرعاية فريق طبي متخصص.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-snapchat"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-left"></i> عن العيادة</a></li>
+                        <li><a href="#doctors"><i class="fas fa-chevron-left"></i> أطباؤنا</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-left"></i> معرض الأعمال</a></li>
+                        <li><a href="#appointment"><i class="fas fa-chevron-left"></i> احجز موعد</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>خدماتنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> تبييض الأسنان</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> تقويم الأسنان</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> زراعة الأسنان</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> قشور الفينير</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> علاج اللثة</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> علاج العصب</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>اتصل بنا</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i>بغداد العامرية شارع عمل الشعبي </li>
+                        <li><i class="fas fa-phone"></i> 07718721380 </li>
+                        <li><i class="fas fa-mobile-alt"></i> 07718721380 </li>
+                        <li><i class="fas fa-envelope"></i> hassouni.alrawi0@gmail.com</li>
+                        <li><i class="far fa-clock"></i> السبت - الخميس: 9 ص - 9 م</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 عيادة أسنان شين. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Sticky Header
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+                
+                const icon = question.querySelector('i');
+                icon.className = item.classList.contains('active') ? 
+                    'fas fa-chevron-up' : 'fas fa-chevron-down';
+            });
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+
+        // Form Submission
+        const bookingForm = document.getElementById('booking-form');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to a server
+                // For demo purposes, we'll just show an alert
+                alert('تم استلام طلبك بنجاح! سنتصل بك خلال 24 ساعة لتأكيد الموعد.');
+                this.reset();
+            });
+        }
+
+        // Testimonials Slider (Simple Version)
+        // In a real project, you might use a library like Swiper.js
+        let currentTestimonial = 0;
+        const testimonials = [
+            {
+                name: "آمنة عبدالله",
+                role: "مريضة فينير الأسنان",
+                img: "https://randomuser.me/api/portraits/women/32.jpg",
+                rating: 5,
+                text: "تجربة رائعة مع عيادة شين، فريق محترف واهتمام بالتفاصيل. بعد تركيب الفينير أصبحت ابتسامتي أجمل بكثير. شكرًا للدكتورة سارة على الاحترافية العالية."
+            },
+            {
+                name: "خالد محمد",
+                role: "مريض تقويم الأسنان",
+                img: "https://randomuser.me/api/portraits/men/45.jpg",
+                rating: 5,
+                text: "كنت أعاني من اعوجاج شديد في أسناني، وبعد سنة من العلاج بالتقويم المعدني أصبحت أسناني مستقيمة تمامًا. شكرًا للدكتورة نورا على المتابعة الدقيقة."
+            },
+            {
+                name: "نورة سعد",
+                role: "مريضة زراعة أسنان",
+                img: "https://randomuser.me/api/portraits/women/68.jpg",
+                rating: 4,
+                text: "زرعت 3 أسنان عند الدكتور محمد وكانت النتيجة ممتازة. الأسنان الصناعية تشبه الطبيعية تمامًا في الشكل والوظيفة. العملية كانت مريحة بفضل التخدير الفعال."
+            }
+        ];
+
+        function showTestimonial(index) {
+            const testimonial = testimonials[index];
+            const testimonialCard = document.querySelector('.testimonial-card');
+            
+            if (testimonialCard) {
+                testimonialCard.querySelector('.client-img img').src = testimonial.img;
+                testimonialCard.querySelector('.client-img img').alt = testimonial.name;
+                
+                let ratingStars = '';
+                for (let i = 0; i < 5; i++) {
+                    ratingStars += `<i class="fas fa-star${i < testimonial.rating ? '' : ' far'}"></i>`;
+                }
+                testimonialCard.querySelector('.client-rating').innerHTML = ratingStars;
+                
+                testimonialCard.querySelector('.testimonial-text').textContent = testimonial.text;
+                testimonialCard.querySelector('.client-info h4').textContent = testimonial.name;
+                testimonialCard.querySelector('.client-info p').textContent = testimonial.role;
+            }
+        }
+
+        // Auto-rotate testimonials every 5 seconds
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+
+        // Initialize first testimonial
+        showTestimonial(0);
+    </script>
+</body>
+</html>
